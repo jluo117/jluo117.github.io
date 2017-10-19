@@ -1,4 +1,5 @@
 body {
+    filter: brightness(2);
 	background-color: #262627;
 	color: #fff;
 	font-family: Helvetica;
