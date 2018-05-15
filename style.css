@@ -1,0 +1,189 @@
+@import url("normalize.css");
+@import url("typeface-fira-mono");
+
+/* Navigation links hover effect from https://tympanus.net/Development/CreativeLinkEffects/ */
+
+@custom-media --layout-xs-and-up (width >= 0px);
+@custom-media --layout-sm-and-up (width >= 576px);
+@custom-media --layout-md-and-up (width >= 768px);
+@custom-media --layout-lg-and-up (width >= 992px);
+@custom-media --layout-xl-and-up (width >= 1200px);
+
+/*
+	wxga 1280 720
+	hdp 1600 900
+	fhd 1920 1080
+	wqhd 2560 1440
+	4k-uhd 3840 2160
+*/
+/* 
+	@custom-media --resolution-wxga (width > 0px) or (height > 0px);
+	@custom-media --resolution-hdp (width > 1280px) or (height > 720px);
+	@custom-media --resolution-fhd (width > 1600px) or (height > 900px);
+	@custom-media --resolution-wqhd (width > 1920px) or (height > 1080px);
+	@custom-media --resolution-4k-uhd (width > 2560px) or (height > 1440px);
+*/
+
+:root {
+	--text-color: rgb(var(--text-color-rgb));
+	--text-color-rgb: 255, 255, 255;
+
+	--primary-color: rgb(var(--primary-color-rgb));
+	--primary-color-rgb: 166, 57, 194;
+
+	--secondary-color: rgb(var(--secondary-color-rgb));
+	--secondary-color-rgb: 217, 59, 155;
+
+	--background-alpha: 0.9;
+	--background-primary-color: rgba(var(--primary-color-rgb), var(--background-alpha));
+	--background-secondary-color: rgba(var(--secondary-color-rgb), var(--background-alpha));
+
+	--background-image: url("background-1920.jpg");
+	--background-overlay-image: linear-gradient(160deg, var(--background-primary-color), var(--background-secondary-color));
+}
+
+html {
+	font-family: "Fira Mono", "Lucida Console", Monaco, monospace;
+	color: var(--text-color);
+}
+
+body {
+	background:
+		var(--background-overlay-image) 50%/cover fixed,
+		var(--background-image) 50%/cover fixed;
+}
+
+.title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+
+	font-size: 2rem;
+}
+
+img {
+	height: 8rem;
+
+	border-radius: 50%;
+	border: 0.15rem solid var(--text-color);
+}
+
+nav {
+	--bracket-margin: 0.8rem;
+
+	font-size: 1.5rem;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+	list-style-type: none;
+	padding: 0;
+}
+
+nav li::before,
+nav li::after {
+	display: inline-block;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+nav li::before {
+	margin-right: var(--bracket-margin);
+	content: "[";
+	transform: translateX(var(--bracket-margin));
+}
+
+nav li::after {
+	margin-left: var(--bracket-margin);
+	content: "]";
+	transform: translateX(calc(-1 * var(--bracket-margin)));
+}
+
+nav li:hover::before,
+nav li:hover::after,
+nav li:focus::before,
+nav li:focus::after {
+	opacity: 1;
+	transform: translateX(0rem);
+}
+
+footer {
+	font-size: 0.9rem;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+	transition: 0.2s ease-in;
+}
+
+a:hover {
+	text-shadow: 0 0 1rem var(--primary-color);
+}
+
+/* LAYOUT */
+body {
+	display: grid;
+	justify-items: center;
+
+	min-height: 100vh;
+
+	box-sizing: border-box;
+	padding: 1rem 2rem;
+}
+
+article {
+	display: grid;
+
+	min-height: 100%;
+	max-width: 1024px;
+}
+
+header {
+	grid-area: header;
+}
+
+main {
+	grid-area: content;
+}
+
+footer {
+	grid-area: footer;
+}
+
+@media (--layout-xs-and-up) {
+	article {
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: 1fr;
+
+		grid-template-areas:
+			"header"
+			"content"
+			"footer";
+	}
+
+	footer {
+		justify-self: end;
+	}
+}
+
+@media (--layout-lg-and-up) {
+	article {
+		grid-template-rows: 1fr auto;
+		grid-template-columns: 2fr 3fr;
+		grid-gap: 0 3rem;
+
+		grid-template-areas:
+			"header content"
+			"footer footer";
+	}
+
+	header,
+	main {
+		align-self: center;
+	}
+}
