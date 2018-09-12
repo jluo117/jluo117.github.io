@@ -58,13 +58,18 @@
               <div class="white-block"></div>
             </div>
           </div>
-          <div class="title">
+          <div id="name" style="display: none;">
             <div class="row">
               <div class="col-md-offset-1 col-md-6">
                 <h1>James Luo</h1>
               </div>
             </div>
           </div>
+              <div class = "col-md-offset-1 col- 5">
+                <body onload="startTime()">
+                  
+
+                <div id="txt"></div>
       </header>
 
 
@@ -149,8 +154,44 @@
         }
       });
     </script>
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+class Greeting extends React.Component {
+    render() {
+        return (<p>Hello world</p>);
+    }
+}
+ReactDOM.render(
+    <Greeting />,
+    document.getElementById('root')
+);
+</script>
+ <script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours() % 12;
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var AM = " AM";
+    if (today.getHours() >= 12){
+      AM = " PM";
+    }
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML = "<p>" +
+    h + ":" + m + ":" + s + AM;
+    var t = setTimeout(startTime, 500) + "</p>";
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $("#name").fadeIn(1500);
+</script>
   </body>
 </html>
