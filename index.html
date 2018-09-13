@@ -67,9 +67,10 @@
           </div>
               <div class = "col-md-offset-1 col- 5">
                 <body onload="startTime()">
-                  
+
 
                 <div id="txt" style="display: none;"></div>
+                <div id="date" style = "display: none"></div>
       </header>
 
 
@@ -182,7 +183,10 @@ function startTime() {
     s = checkTime(s);
     document.getElementById('txt').innerHTML = "<p>" +
     h + ":" + m + ":" + s + AM;
+    document.getElementById('date').innerHTML = "<p>" + 
+    today.getMonth() + '-' + today.getDate() + '-' + today.getFullYear() + '</p>'
     var t = setTimeout(startTime, 500) + "</p>";
+
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -192,6 +196,7 @@ function checkTime(i) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $("#txt").fadeIn(4000);
+  $("#date").fadeIn(4000);
   $("#name").fadeIn(3500);
   $("#aboutMe").fadeIn(5000);
 </script>
