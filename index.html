@@ -183,9 +183,7 @@ function startTime() {
     s = checkTime(s);
     document.getElementById('txt').innerHTML = "<p>" +
     h + ":" + m + ":" + s + AM;
-    document.getElementById('date').innerHTML = "<p>" + 
-    today.getMonth() + '-' + today.getDate() + '-' + today.getFullYear() + '</p>'
-    var t = setTimeout(startTime, 500) + "</p>";
+    var t = setTimeout(startTime, 1000000) + "</p>";
 
 }
 function checkTime(i) {
