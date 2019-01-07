@@ -179,10 +179,13 @@ function startTime() {
     if (today.getHours() >= 12){
       AM = " PM";
     }
+    if (h == 0){
+      h = 12;
+    }
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('txt').innerHTML = "<p>" +
-    h + ":" + m + ":" + s + AM;
+    h + ":" + m  + AM;
     var t = setTimeout(startTime, 1000000) + "</p>";
 
 }
