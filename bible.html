@@ -6,11 +6,12 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
-	Book: <input type="text" value="" placeholder="Book Name" id = "Book">
-	Chapter: <input type="text" value="" placeholder="Chapter Number" id = "Chapter">
-	Verse/Starting Verse: <input type="text" value="" placeholder="Leave empty for entire chapter" id = "VerseStart">	
-	Ending Verse: <input type="text" value="" placeholder="leave empty if single" id = "VerseEnd">	
-	<button onclick="bible(Book.value,Chapter.value,VerseStart.value,VerseEnd.value)">See verses</button>
+	<h3>Book: <input type="text" value="" placeholder="Book Name" id = "Book" size = 20></h3>
+	<h3>Chapter: <input type="text" value="" placeholder="Chapter Number(required)" size = 25 id = "Chapter"></h3>
+	<b></b>
+	<h3>Verse/Starting Verse: <input type="text" value="" placeholder="Leave empty for entire chapter" size = 30 id = "VerseStart">	</h3>
+	<h3>Ending Verse: <input type="text" value="" placeholder="leave empty if single" id = "VerseEnd">	</h3>
+	<button onclick="bible(Book.value,Chapter.value,VerseStart.value,VerseEnd.value)"><h2>See verses</h2></button>
 	<b></b>
 	<p><a id = "bibleVerse"></a></p>
 </body>
