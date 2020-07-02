@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Bible Verse Look Up</title>
+</head>
+<script type="text/javascript" src="bible.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+	Book: <input type="text" value="" placeholder="Book Name" id = "Book">
+	Chapter: <input type="text" value="" placeholder="Chapter Number" id = "Chapter">
+	Verse/Starting Verse: <input type="text" value="" placeholder="Verse number" id = "VerseStart">	
+	Verse/Ending Verse: <input type="text" value="" placeholder="leave empty if single" id = "VerseEnd">	
+	<button onclick="bible(Book.value,Chapter.value,VerseStart.value,VerseEnd.value)">See verses</button>
+	<b></b>
+	<p><a id = "bibleVerse"></a></p>
+</body>
+</html>
