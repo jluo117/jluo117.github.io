@@ -1,4 +1,5 @@
 function bible(Book,chapter,verseStart,verseEnd){
+	var curOutPut = ""
 	if (Book == ""){
 		return;
 	}
@@ -17,7 +18,10 @@ function bible(Book,chapter,verseStart,verseEnd){
 		} 
 	}
         $.getJSON('https://bible-api.com/'+ userInput, function(data) {
-
-            document.getElementById("bibleVerse").innerHTML = "<h3>" + data['text'] + "<b></h3>"
+        	var verses = (data["verses"]);
+        	for (var verseNumber = 0; verseNumber < verses.length; verseNumber ++){
+        		curOutPut += (verses[verseNumber]['verse'] +' ' +verses[verseNumber]['text']);
+        	}
+            document.getElementById("bibleVerse").innerHTML = "<h3>" + curOutPut + "<b></h3>"
 		});
     }
