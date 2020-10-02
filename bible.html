@@ -1,11 +1,13 @@
 <html>
 <head>
     <title>Bible Verse Look Up</title>
+    <link rel="stylesheet" type = "text/css" href="bible.css" </link>
 </head>
 <script type="text/javascript" src="bible.js">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
+  <div id="main">
 	<h3>Book: <input type="text" value="" placeholder="Book Name" id = "Book" size = 20></h3>
 	<h3>Chapter: <input type="text" value="" placeholder="Chapter Number or range(required)" size = 30 id = "Chapter"></h3>
 	<b></b>
@@ -14,5 +16,8 @@
 	<button onclick="bible(Book.value,Chapter.value,VerseStart.value,VerseEnd.value)"><h2>See verses</h2></button>
 	<b></b>
 	<p><a id = "bibleVerse"></a></p>
+  <button onclick="secretMsg()"><h2>Click here</h2></button>
+  <p><a id = "secret"></a></p>
+</div>
 </body>
 </html>

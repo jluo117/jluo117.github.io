@@ -15,7 +15,7 @@ function bible(Book,chapter,verseStart,verseEnd){
 		}
 		else{
 			userInput += ' ' + chapter
-		} 
+		}
 	}
         $.getJSON('https://bible-api.com/'+ userInput, function(data) {
         	var verses = (data["verses"]);
@@ -25,3 +25,7 @@ function bible(Book,chapter,verseStart,verseEnd){
             document.getElementById("bibleVerse").innerHTML = "<h3>" + curOutPut + "<b></h3>"
 		});
     }
+function secretMsg(){
+	document.getElementById("secret").innerHTML = "<h1>" + "Go to Church" + "<b></h1>"
+
+}
