@@ -5,6 +5,8 @@ html, body {
   text-rendering: optimizeLegibility;
   color: #222;
   overflow-x: hidden;
+  background-color: #00008B; 
+
 }
 h4 {
   font-size: 22px;
@@ -18,7 +20,7 @@ a:hover,
 a:active,
 a:visited {
   text-decoration: none;
-  color: #5000F1;
+  color: #DC143C;
 }
 
 header h2 {
@@ -28,7 +30,7 @@ header h2 {
   margin-top: 70px;
 }
 header a h2 {
-  color: #222;
+  color: #DC143C;
 }
 header a h2 span {
   transition: all 400ms cubic-bezier(0.68, -0.1, 0.265, 1.55);
@@ -82,34 +84,30 @@ header h3 {
   font-size: 21px;
 }
 
-
+#name{
+  color: #DC143C
+}
+#aboutMe{
+  color: #e65c00
+}
+#txt{
+  color: #DC143C
+}
+#date{
+  color: #DC143C
+}
+.button{
+  background-color: #4CAF50;
+}
 /*----------------------------------
   Background Grid
 ------------------------------------*/
 
 
-.grid {
-  position: fixed;
-  width: 100%;
-}
-.grid-line {
-  height: 100vh;
-  border-left: 1px solid #ccc;
-}
 
 
 
 
-.fixed-top {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: #00F1C9;
-  border-radius: 12px;
-  z-index: -1;
-  margin-top: -220px;
-  margin-left: 100px;
-}
 
 
 /*----------------------------------
