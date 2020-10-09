@@ -34,7 +34,12 @@ function bible(Book,chapter,verseStart,verseEnd){
 		});
     }
 function secretMsg(){
-	
+	if (hasClicked){
+		document.getElementById("secret").innerHTML = "<h1>" + "Jesus is King" + "<b></h1>";
+		hasClicked = false;
+		return;
+	}
+	hasClicked = true;
 	document.getElementById("secret").innerHTML = "<h1>" + "Go to Church" + "<b></h1>";
 }
 function openInNewTab(url) {
