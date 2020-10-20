@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/dixonandmoe/rellax/issues"
   },
-  "homepage": "https://dixonandmoe.com/rellax/"
+  "homepage": "https://dixonandmoe.com/rellax/",
+  "dependencies": {
+    "heap-js": "^2.1.2"
+  }
 }

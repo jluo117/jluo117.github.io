@@ -1,5 +1,5 @@
 var hasClicked = false
-function bible(Book,chapter,verseStart,verseEnd){
+async function bible(Book,chapter,verseStart,verseEnd){
 	var curOutPut = ""
 	if (Book == ""){
 		return;
@@ -25,7 +25,7 @@ function bible(Book,chapter,verseStart,verseEnd){
 			userInput += ' ' + chapter
 		}
 	}
-        $.getJSON('https://bible-api.com/'+ userInput, function(data) {
+        await $.getJSON('https://bible-api.com/'+ userInput, function(data) {
         	var verses = (data["verses"]);
         	for (var verseNumber = 0; verseNumber < verses.length; verseNumber ++){
         		curOutPut += (verses[verseNumber]['verse'] +' ' +verses[verseNumber]['text']);
