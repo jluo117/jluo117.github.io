@@ -1,12 +1,70 @@
-import{Heap} from 'heap-js'
-function loadData(){
-	$.getJSON('https://api.nasa.gov/planetary/apod?api_key=i4WERS5Lp8YotCxpWV7l07nsblcJ0vm69nauMGcK', function(data) {
-        	console.log(data);
-		});
+function nextSunday(){ //should return date in String
+  var todayDay = new Date();
+  if (todayDay.getDay() == 0){
+    return String(todayDay.getMonth()+1) + " " + String(todayDay.getDate()) + " " + String(todayDay.getFullYear());
+  }
+  var daysTillSunday = 7 - todayDay.getDay();
+  todayDay.setDate(todayDay.getDate() + 7-todayDay.getDay());
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 
+
+
+  return monthNames[todayDay.getMonth()] + " " + String(todayDay.getDate()) + " " + String(todayDay.getFullYear());
 }
-var ary = [];
-Heap.heapify(ary);
-Heap.heappush(ary,(1,2));
-Heap.heappush(ary,(3,1));
-console.log(ary)
+async function loadData(aVal,bVal){
+  fetch('http://localhost:5001/serverleibary/us-central1/add',{
+    method:"POST",
+    
+    body:JSON.stringify({a:aVal,b:bVal})
+  })
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+        document.getElementById("text").innerHTML = data["result"];
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+}
+async function subVal(aVal,bVal){
+  fetch('http://localhost:5001/serverleibary/us-central1/add',{
+    method:"PUT",
+    
+    body:JSON.stringify({a:aVal,b:bVal})
+  })
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+        document.getElementById("text").innerHTML = data["result"];
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+}
+
+
+
+
+
