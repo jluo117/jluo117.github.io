@@ -64,7 +64,19 @@ async function subVal(aVal,bVal){
   });
 }
 
-
+async function callSocial(){
+  fetch(("http://localhost:5001/serverleibary/us-central1/getLink"),{
+    method:"POST",
+    body:JSON.stringify({link:"siteA"})
+  }).then(
+    function(response){
+      console.log(response)
+      response.json().then(function(data){
+        console.log(data);
+      })
+    }
+    )
+}
 
 
 
