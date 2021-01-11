@@ -25,16 +25,8 @@ function elonMusk(){
       return i;
   }
   (function () {
-    console.log("test")
-
-
-
 
           startTime();
-
-
-
-
         }
         //seconds
       }, 1000)
