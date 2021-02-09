@@ -5,7 +5,7 @@ html, body {
   text-rendering: optimizeLegibility;
   color: #222;
   overflow-x: hidden;
-  background-color: #00008B; 
+  background-color: #404040;
 
 }
 h4 {
@@ -100,7 +100,7 @@ header h3 {
   background-color: #4CAF50;
 }
 #contact{
-  color: #7FFF00  
+  color: #0197F6
 }
 /*----------------------------------
   Background Grid
@@ -401,6 +401,3 @@ span.white {
 
 
 }
-
-
-
