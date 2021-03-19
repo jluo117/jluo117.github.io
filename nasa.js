@@ -39,7 +39,7 @@ async function loadData(aVal,bVal){
   });
 }
 async function subVal(aVal,bVal){
-  fetch('http://localhost:5001/serverleibary/us-central1/add',{
+  fetch('http://localhost:5001/serverleibary/us-central1/addFunction',{
     method:"PUT",
     
     body:JSON.stringify({a:aVal,b:bVal})
