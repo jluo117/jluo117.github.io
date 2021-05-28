@@ -6,6 +6,10 @@
         "name": "Angry Nerds",
         "url": "https://www.example.com"
     },
+    "baseUrl": "https://example.com",
+    "authentication": {
+        "type": "jwt"
+    },
     "scopes": ["account", "repository"],
    "contexts": ["account"]
 }
