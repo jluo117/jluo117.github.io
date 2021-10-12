@@ -24,7 +24,7 @@
   <body>
     <div class="grid">
       <div class="container">
-        
+
     </div>
 
     <div class="fixed-top rellax" data-rellax-speed="-2"
@@ -49,7 +49,7 @@
             </div>
           </div>
               <div class = "col-md-offset-1 col- 5">
-                <body onload="startTime()">
+
 
 
                 <div id="txt" style="display: none;"></div>
@@ -103,9 +103,9 @@
             <div class="row">
               <div class="col-md-offset-1 col-md-6">
                 <h1>Who am I</h1>
-                <p> I am a Computer Science major at UC Riverside that graduate in 2020. I have a passion for mobile and VR technology. I have develop iOS apps in Swift and published them onto the App Store. I have worked in two labs a microfluidics lab in which my job is to help create the software that will generate the svg files that shows the result of the system and my other lab I am currently working with Unity and 5g networks to develope a AR application to determine if 5g is fast enough for a pure network multiuser application. I also love hackathons in which I use skills I learn in class to build new. I was an officer for <a href="http://acmucr.org"> ACM </a> on my campus in which my job was to organize events and lead technical workshops
+                <p> I was a Computer Science major at UC Riverside that graduate in June 2020. I have a passion for mobile and VR technology. I have developed iOS apps in Swift and published them onto the App Store. I have worked in two labs a microfluidics lab in which my job is to help create the software that will generate the svg files that shows the result of the system and the other lab I am currently working with Unity and 5g networks to develop an AR application to determine if 5g is fast enough for a pure network multiuser application. I also love hackathons in which I use the skills I learn in class to build new. I was an officer for <a href="http://acmucr.org"> ACM </a> on my campus in which my job was to organize events and lead technical workshops
                 </p>
-                <p> One of my iOS games <a href="https://apps.apple.com/om/app/soccer-pong-by-acm/id1345533840"> Soccer Pong</a> has over 100 downloads on the iTunes app store </p>
+                <p> An iOS games that I built, <a href="https://apps.apple.com/om/app/soccer-pong-by-acm/id1345533840"> Soccer Pong</a> has over 100 downloads on the iTunes app store </p>
                 <p> My did my senior design on expoliting CVE-2019–14287 which you can read about <a href="https://medium.com/@jamesluo_843/exploiting-cve-2019-14287-37eac7023a4"> here </a></p>
               </div>
             </div>
@@ -118,12 +118,17 @@
                 <p> Checkout my <a href="https://github.com/jluo117">Github</a> with all my awesome projects </p>
                 <p> Also feel free to contact me on <a href="https://www.linkedin.com/in/james-l-30985a103/">Linkedin</a>
                 </p>
+<<<<<<< HEAD
                 <p> Here is my <a href="assets/James_Luo_Resume.pdf">resume</a></p>
                
+=======
+                <p> If you will like to find out more about me I have my <a href="assets/James_Luo_Resume.pdf">resume here</a></p>
+
+>>>>>>> 81bc141bb2c8ef46f3398dec14868f96fbed6ac7
               </div>
             </div>
           </div>
-          <button onclick="elonMusk()"> Nuke Mars </button>
+
       </section>
 
       </section>
@@ -149,7 +154,15 @@
 
 </script>
  <script>
-function startTime() {
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $("#txt").fadeIn(4000);
+  $("#date").fadeIn(4000);
+  $("#name").fadeIn(3500);
+  $("#aboutMe").fadeIn(5000);
+  function startTime() {
     var today = new Date();
     var h = today.getHours() % 12;
     var m = today.getMinutes();
@@ -163,22 +176,19 @@ function startTime() {
     }
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt').innerHTML = "<h3>You visited me at " +
+    document.getElementById('txt').innerHTML = "<h3>It is " +
     h + ":" + m  + AM;
     var t = setTimeout(startTime, 1000000) + "</h3>";
 
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  $("#txt").fadeIn(4000);
-  $("#date").fadeIn(4000);
-  $("#name").fadeIn(3500);
-  $("#aboutMe").fadeIn(5000);
+
+  }
+  function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+  }
+  x = setInterval(function(){
+    startTime()
+  },1000)
 </script>
   </body>
 </html>
