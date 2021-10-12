@@ -1,0 +1,15 @@
+{
+    "key": "jluo117key",
+    "name": "Auth key",
+    "description": "An example app for Bitbucket",
+    "vendor": {
+        "name": "Angry Nerds",
+        "url": "https://www.example.com"
+    },
+    "baseUrl": "https://example.com",
+    "authentication": {
+        "type": "jwt"
+    },
+    "scopes": ["account", "repository"],
+   "contexts": ["account"]
+}

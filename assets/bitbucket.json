@@ -1,0 +1,11 @@
+{
+    "key": "example-app",
+    "name": "Auth key",
+    "description": "An example app for Bitbucket",
+    "vendor": {
+        "name": "Angry Nerds",
+        "url": "https://www.example.com"
+    },
+    "scopes": ["account", "repository"],
+   "contexts": ["account"]
+}
