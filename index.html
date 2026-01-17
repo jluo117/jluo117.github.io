@@ -1,191 +1,508 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>James Luo</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700,900' rel='stylesheet' type='text/css'>
-
-    <!-- Booooooootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-    <![endif]-->
-  </head>
-
-  <body>
-    <div class="grid">
-      <div class="container">
-
-    </div>
-
-    <div class="fixed-top rellax" data-rellax-speed="-2"
-      style="transform: rotate(45deg);"
-    >
-    </div>
-
-    <main class="main">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-offset-1 col-md-11">
-              </a>
-              <div class="white-block"></div>
-            </div>
-          </div>
-          <div id="name" style="display: none;">
-            <div class="row">
-              <div class="col-md-offset-1 col-md-6">
-                <h1>James Luo</h1>
-              </div>
-            </div>
-          </div>
-              <div class = "col-md-offset-1 col- 5">
-
-
-
-                <div id="txt" style="display: none;"></div>
-                <div id="date" style = "display: none"></div>
-      </header>
-
-
-
-
-      <section class="section">
-
-        <div class="absolute above" style="pointer-events: none;">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-md-offset-1 col-md-2">
-                <div class="bt-green rellax"
-                  data-rellax-speed="5"
-                  style="transform: rotate(45deg);">
-                </div>
-              </div>
-
-              <div class="col-md-offset-0 col-md-1">
-                <div class="md-dixonandmoe rellax"
-                  data-rellax-speed="2"
-                  style="transform: rotate(45deg);">
-                </div>
-              </div>
-
-              <div class="col-md-offset-5 col-md-1">
-                <div class="md-twitter rellax"
-                  data-rellax-speed="1"
-                  style="transform: rotate(45deg);">
-                </div>
-              </div>
-
-              <div class="col-md-1">
-                <div class="md-facebook rellax"
-                  data-rellax-speed="3"
-                  data-rellax-percentage="0.5"
-                  style="transform: rotate(45deg);">
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div id = "aboutMe" style="display: none;">
-        <div class="copy" style="margin-top: 200px;margin-bottom: 500px">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-offset-1 col-md-6">
-                <h1>Who am I</h1>
-                <p> I was a Computer Science major at UC Riverside that graduate in June 2020 and is currently doing a Masters. I have a passion for mobile and VR technology. I have developed iOS apps in Swift and published them onto the App Store. I have worked in two labs a microfluidics lab in which my job is to help create the software that will generate the svg files that shows the result of the system and the other lab I am currently working with Unity and 5g networks to develop an AR application to determine if 5g is fast enough for a pure network multiuser application. I also love hackathons in which I use the skills I learn in class to build new. I was an officer for <a href="http://acmucr.org"> ACM </a> on my campus in which my job was to organize events and lead technical workshops
-                </p>
-                <p> An iOS games that I built, <a href="https://apps.apple.com/om/app/soccer-pong-by-acm/id1345533840"> Soccer Pong</a> has over 100 downloads on the iTunes app store </p>
-                <p> My did my senior design on expoliting CVE-2019–14287 which you can read about <a href="https://medium.com/@jamesluo_843/exploiting-cve-2019-14287-37eac7023a4"> here </a></p>
-              </div>
-            </div>
-            </div>
-          </div>
-            <div id = "contact" class="row" style="margin-top: 140px">
-              <div class="col-md-offset-5 col-md-6">
-                <h1>Contact Me</h1>
-                <p> Feel free to email me at <a href="mailto:luojames52@gmail.com">luojames52@gmail.com</a></p>
-                <p> Checkout my <a href="https://github.com/jluo117">Github</a> with all my awesome projects </p>
-                <p> Also feel free to contact me on <a href="https://www.linkedin.com/in/james-l-30985a103/">Linkedin</a>
-                </p>
-
-                <p> Here is my <a href="assets/James_Luo_Resume.pdf">resume</a></p>
-               
-
-              </div>
-            </div>
-          </div>
-
-      </section>
-
-      </section>
-    </main>
-
-
-    <!-- javascript -->
-    <script type="text/javascript" src="rellax.js"></script>
-    <script>
-    	var rellax = new Rellax('.rellax', {
-        // center: true
-        callback: function(position) {
-            // callback every position change
-            console.log(position);
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Luo - Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      });
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #fff;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .experience-item {
+            margin-bottom: 3rem;
+            position: relative;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid #0a0a0a;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .company-info h3 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 0.3rem;
+        }
+
+        .role {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .date-location {
+            text-align: right;
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .achievements {
+            margin-top: 1rem;
+        }
+
+        .achievement-category {
+            margin-bottom: 1rem;
+        }
+
+        .achievement-category h4 {
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .achievement-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievement-category li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .achievement-category li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+
+        .research-section {
+            background: #0f0f0f;
+        }
+
+        .research-card {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(102,126,234,0.2);
+            margin-top: 2rem;
+        }
+
+        .award-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #0a0a0a;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .date-location {
+                text-align: left;
+            }
+
+            .experience-timeline {
+                padding-left: 1.5rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>James Luo</h1>
+            <p>Software Engineer @ Meta | VR/AR Specialist | Full-Stack Developer</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company-info">
+                        <h3>Meta</h3>
+                        <p class="role">Software Engineer</p>
+                    </div>
+                    <div class="date-location">
+                        <div>September 2022 - Current</div>
+                        <div>Menlo Park, CA</div>
+                    </div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-category">
+                        <h4>Horizon Feed</h4>
+                        <ul>
+                            <li>Built fullstack features using GraphQL and React VR, improving monthly active users and Oculus Store revenue</li>
+                            <li>Developed cache system design optimizing initial JavaScript loading with Android native code, achieving 50% improvement in app performance</li>
+                            <li>Decreased Horizon Mobile's crash rate by 5% through memory optimization using React Native</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-category">
+                        <h4>Horizon Infrastructure</h4>
+                        <ul>
+                            <li>Developed large-scale E2E testing framework in Rust for Horizon events</li>
+                            <li>Built mobile tooling enabling teams to test changes significantly faster</li>
+                            <li>Created server-side tooling for improved disaster recovery handling of Horizon Cloud fleet</li>
+                            <li>Reduced E2E loading latency by 15 seconds through client and server-side system improvements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company-info">
+                        <h3>Metabob</h3>
+                        <p class="role">Backend Software Engineer</p>
+                    </div>
+                    <div class="date-location">
+                        <div>May 2021 - August 2022</div>
+                        <div>Palo Alto, CA</div>
+                    </div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-category">
+                        <h4>Code Error Detection API</h4>
+                        <ul>
+                            <li>Built authentication API supporting GitHub, Bitbucket, and GitLab</li>
+                            <li>Improved NLP token processing performance by 50%</li>
+                            <li>Developed API for repo health status export functionality</li>
+                            <li>Built backend pipelines for CLI and VSCode extension, contributing to 80% of company traffic within first 3 months</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-category">
+                        <h4>CLI Tool</h4>
+                        <ul>
+                            <li>Developed Go-based CLI tool for batch file analysis, improving on VSCode extension capabilities</li>
+                            <li>Built customer interfaces for code review pipeline integration</li>
+                            <li>Collaborated with marketing team on GitHub Co-Pilot vs Metabob CLI demos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company-info">
+                        <h3>SingTao</h3>
+                        <p class="role">Backend Engineer Contractor</p>
+                    </div>
+                    <div class="date-location">
+                        <div>October 2020 - March 2021</div>
+                        <div>Burlingame, CA</div>
+                    </div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-category">
+                        <h4>Advertisement Platform</h4>
+                        <ul>
+                            <li>Developed advertisement platform using PHP, JavaScript, and MySQL</li>
+                            <li>Designed backend system for Digital Signage integration, targeting 100+ businesses in the San Francisco Bay Area</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Technical Skills</h3>
+            <div class="skills">
+                <span class="skill-tag">React VR</span>
+                <span class="skill-tag">GraphQL</span>
+                <span class="skill-tag">Rust</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Android</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">E2E Testing</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section research-section">
+        <h2 class="section-title">Research & Publications</h2>
+        <div class="research-card">
+            <span class="award-badge">🏆 Best Paper Award</span>
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">AR Mobility</h3>
+            <p style="margin-bottom: 0.5rem; opacity: 0.9;">ACM Multimedia Systems Conference 2023 (MMSys '23)</p>
+            <p style="margin-top: 1rem;">Developed streaming algorithms to collect user data from Pokémon GO and created machine learning-based algorithms for clustering anchor points and optimizing 3D asset loading methods.</p>
+        </div>
+    </section>
+
+    <section class="section" style="background: #0f0f0f;">
+        <h2 class="section-title">Education</h2>
+        <div class="experience-item" style="margin-left: 0;">
+            <div class="experience-header">
+                <div class="company-info">
+                    <h3>University of California, Riverside</h3>
+                    <p class="role">BS + MS in Computer Science</p>
+                </div>
+                <div class="date-location">
+                    <div>Riverside, CA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <h2 class="section-title" style="color: white;">Let's Connect</h2>
+        <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">Open to new opportunities and collaborations. Feel free to reach out!</p>
+        
+        <div class="contact-links">
+            <a href="mailto:luojames52@gmail.com" class="contact-link">
+                📧 Email Me
+            </a>
+            <a href="https://github.com/jluo117" class="contact-link" target="_blank">
+                💻 GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/james-l/" class="contact-link" target="_blank">
+                💼 LinkedIn
+            </a>
+            <a href="assets/James_Luo_Resume.pdf" class="contact-link" target="_blank">
+                📄 Resume
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.experience-item, .research-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
     </script>
-<script type="text/javascript" src = "nukeMars.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
-<script type="text/babel">
-
-</script>
- <script>
-
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  $("#txt").fadeIn(4000);
-  $("#date").fadeIn(4000);
-  $("#name").fadeIn(3500);
-  $("#aboutMe").fadeIn(5000);
-  function startTime() {
-    var today = new Date();
-    var h = today.getHours() % 12;
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    var AM = " AM";
-    if (today.getHours() >= 12){
-      AM = " PM";
-    }
-    if (h == 0){
-      h = 12;
-    }
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('txt').innerHTML = "<h3>It is " +
-    h + ":" + m  + AM;
-    var t = setTimeout(startTime, 1000000) + "</h3>";
-
-
-  }
-  function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-  }
-  x = setInterval(function(){
-    startTime()
-  },1000)
-</script>
-  </body>
+</body>
 </html>
